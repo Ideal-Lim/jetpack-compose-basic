@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ComposeCookBookBasic</string>
+    <string name="description_btm_navigation_bar">바텀네비게이션바는 action을 가지고 있습니다.</string>
+    <string name="navigation_item_home">A</string>
+    <string name="navigation_b">B</string>
+    <string name="navigation_c">C</string>
+    <string name="navigation_d">D</string>
+    <string name="bottomnav_home">Home</string>
+</resources>
