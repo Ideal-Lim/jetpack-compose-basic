@@ -1,13 +1,14 @@
 import com.ideallim.demoapp.build.configurations.ProjectConfigs
-import com.ideallim.demoapp.build.dependencies.addComposeOfficialDependencies
-import com.ideallim.demoapp.build.dependencies.addCoreAndroidDependencies
-import com.ideallim.demoapp.build.dependencies.addCoreAndroidUiDependencies
-import com.ideallim.demoapp.build.dependencies.addKotlinDependencies
+import com.ideallim.demoapp.build.dependencies.*
+
 
 plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
+}
+apply {
+    plugin("kotlin-android")
 }
 
 android {
@@ -49,6 +50,16 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = ProjectConfigs.kotlinCompilerExtensionVersion
     }
+    lint {
+        isAbortOnError = false
+    }
+
+    packagingOptions {
+        resources.excludes.apply {
+            add("META-INF/AL2.0")
+            add("META-INF/LGPL2.1")
+        }
+    }
 
     testOptions {
         unitTests.all {
@@ -63,6 +74,8 @@ dependencies {
     addCoreAndroidUiDependencies()
     addComposeOfficialDependencies()
 
+
     implementation(project(":data"))
+    implementation(project(":MyComposeLib"))
 
 }

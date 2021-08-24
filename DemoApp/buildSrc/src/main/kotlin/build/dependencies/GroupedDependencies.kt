@@ -15,8 +15,8 @@ internal val composeOfficialDependencies = listOf(
 
 internal val composeThirdPartyDependencies = listOf(
     Dependencies.fontAwesomeCompose,
-    Dependencies.composeLottie,
-    Dependencies.flinger
+//    Dependencies.composeLottie,
+//    Dependencies.flinger
 )
 
 internal val composeDebugDependencies = listOf(
