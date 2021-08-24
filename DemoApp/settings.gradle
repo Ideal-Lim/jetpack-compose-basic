@@ -10,3 +10,5 @@ rootProject.name = "DemoApp"
 include ':app'
 include ':data'
 include ':MyComposeLib'
+include ':components'
+include ':components:carousel'
